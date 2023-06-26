@@ -8,7 +8,7 @@ def Create_GUI():
     def button_trigger():
         global file_path 
         global imgCv
-        file_path = filedialog.askopenfilename(initialdir="/",
+        file_path = filedialog.askopenfilename(initialdir="C:/Users/Desarrollo_02/myenv/clean_paper-master/clean_paper-master",
         title="Open File",filetypes=(("jpeg files","*.jpg"),("all files","*.*")))
         entry.insert(0,file_path)
         imgCv=OpenImg(file_path)
