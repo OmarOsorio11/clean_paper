@@ -1,14 +1,10 @@
 import cv2
-import numpy
-import tkinter
 from tkinter import filedialog
 def getFilePath():
-    root = tkinter.Tk() #esto se hace solo para eliminar la ventanita de Tkinter 
-    root.withdraw() #ahora se cierra 
-    
     file_path=filedialog.askopenfilename(initialdir="/",
     title="Seleccionae Archivo",filetypes=(("jpeg files","*.jpg"),("all files","*.*")))
     return file_path
+
 def filterPixel(img,p):
     #-- Convert to Gray Scale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
